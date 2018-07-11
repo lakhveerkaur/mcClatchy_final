@@ -1,0 +1,127 @@
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <nav class="navbar fixed-top navbar-default">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#">
+                <img src="http://www.mcclatchy.com/assets/images/minified/logos/mcclatchy-logo-horizontal.svg" alt="McClatchy" title="McClatchy">
+              </a>
+          </div>
+        </nav>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #form="ngForm" (ngSubmit)="onSubmitDetails(form.value)">
+        <div class="container-fluid">
+        <div class="row">
+          <div class="col-3">  <label for="recipient-name">Link:</label></div>
+          <div class="col-9"><input type="text" class="form-control" value="scoopworld.com/usa/NASA-Scientist-just-destroy-2019" ></div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div class="col-3"> <label for="recipient-name">Received on:</label></div>
+          <div class="col-9"><input type="text" class="form-control" value="7/4/2018 10:28" ></div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div class="col-3"> <label for="message-text">Sources Checked:</label></div>
+          <div class="col-9"><textarea class="form-control" required name="sources_checked" ngModel></textarea></div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div class="col-3"> <label for="message-text">Comments:</label></div>
+          <div class="col-9">  <textarea class="form-control" required name="comments" ngModel></textarea></div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+          <div class="col-3"> <label for="message-text">More information:</label></div>
+          <div class="col-9">  <textarea class="form-control" required name="info" ngModel></textarea></div>
+        </div>
+
+        <div class="row" style="margin-top:10px">
+            <div class="col-3"> <label for="message-text">Status:</label></div>
+            <div class="col-9">
+            <label class="radio-inline" style="margin-right:10px"><input type="radio"  value="True" name="status" ngModel>True</label>
+            <label class="radio-inline" style="margin-right:10px"><input type="radio"  value="Partially True" name="status" ngModel>Partially True</label>
+            <label class="radio-inline" style="margin-right:10px"><input type="radio"  value="Fake" name="status" ngModel>Fake</label>
+        </div>
+      </div>
+      <div align="center" style="margin-top:10px">
+      <button type="button" class="btn btn-primary" style="margin-right:10px" data-dismiss="modal" (click)="onSubmitDetails(form.value)">Save</button>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+    </div>
+  </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-md">
+    <nav style="text-align:right;margin-top:100px;height:40px;">
+      <h6>  <a style="margin-right:60px"   >New Stories</a>
+        <a style="margin-right:60px" >My Profile</a>
+        <a href="#" style="margin-right:60px" >Logout</a>
+      </h6>
+    </nav>
+  </div>
+</div>
+
+<div class="login">
+  <div class="row" >
+    <div class="col-md-2"></div>
+    <div style="margin-top:10px" class="col-md-7">
+      <div *ngIf = "alert" class="alert alert-success alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close" (click)="cancelAlert()">&times;</a>
+      <p style="font-weight:bold">Story has been verified : {{this.status}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" >
+    <div class="col-md-2"></div>
+      <div class="col-md-7">
+        <div class="card mb-3" >
+          <div class="card-body">
+          <a href='' data-toggle="modal"  data-target="#exampleModal">  <h5 class="card-title"  (click)="storyDetails()">NASA Scientist just confirmed that a giant asteroid will destroy Earth in 2019</h5></a>
+            <p class="card-text">In a stunning revelation, a NASA scientist has just confirmed that a giant asteroid is expected to destroy Earth as we know it in 2019.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+      <div class="col-md-7">
+        <div class="card mb-3"  >
+          <div class="card-body">
+            <a href='' data-toggle="modal"  data-target="#exampleModal"><h5 class="card-title" data-toggle="modal"  data-target="#exampleModal" (click)="storyDetails()">MP should realise people are watching,will decide at election time.</h5></a>
+            <p class="card-text">MP should realise people are watching,will decide at election time. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+      <div class="col-md-7">
+        <div class="card mb-3" >
+          <div class="card-body">
+          <a href='' data-toggle="modal"  data-target="#exampleModal">  <h5 class="card-title" data-toggle="modal"  data-target="#exampleModal" (click)="storyDetails()">PM Modi to launch number of projects.</h5></a>
+            <p class="card-text">PM Modi to launch number of projects as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 6 mins ago</small></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

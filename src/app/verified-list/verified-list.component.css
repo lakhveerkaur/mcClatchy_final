@@ -1,0 +1,80 @@
+.login{
+ background-color: #dee2e6;
+ min-height: 600px
+}
+ul {
+  list-style-type: none;
+}
+a {
+    color: rgb(0,92,165);
+    font-weight: normal;
+}
+a:hover {
+    color: #0F5DA7;
+}
+table {
+    font-family: roboto;
+    border-collapse: collapse;
+    width: 100%;
+}
+th{
+  font-size: 19px;
+}
+td{
+  font-size: 17px;
+}
+td, th {
+    text-align: center;
+    padding: 8px;
+}
+table#t01 th {
+    background-color: rgb(0,92,165);
+    color: white;
+}
+.alert-success {
+    color: black;
+    background-color: #1ce54c;
+    border-color: #2edf57;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+}
+h6{
+  font-family: roboto;
+  color: rgb(0,92,165);
+  font-size:18px;
+}
+h4{
+  font-family: roboto;
+  color: rgb(0,92,165);
+  font-weight: bold;
+}
+.bgreen{
+  background-color: green;
+  color: white;
+  padding: 10px;
+}
+.bred{
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+.bwarming{
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+}
+p{
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: bold;
+}
+.even{
+  background-color: green;
+}
+.odd{
+  background-color: red;
+}
